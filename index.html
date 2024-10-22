@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Salão de Beleza</title> <!-- Link para CSS -->
+</head>
+<body>
+    <h1>Produtos do Salão de Beleza</h1>
+    <form id="productForm"> <!-- Altere o ID aqui -->
+        <input type="text" id="name" placeholder="Nome do Produto" required> <!-- Altere o ID para 'name' -->
+        <textarea id="description" placeholder="Descrição" required></textarea> <!-- Altere o ID para 'description' -->
+        <input type="number" id="price" placeholder="Preço" required> <!-- Altere o ID para 'price' -->
+        <input type="text" id="image" placeholder="URL da Imagem" required> <!-- Altere o ID para 'image' -->
+        <button type="submit">Adicionar Item</button>
+    </form>
+    <div id="productList"></div>
+
+    <script src="script.js"></script> <!-- Link para JavaScript -->
+</body>
+</html>
