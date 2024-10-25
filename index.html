@@ -3,19 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page - Salão de Beleza</title> <!-- Link para CSS -->
+    <title>Landing Page - Salão de Beleza</title>
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://apis.google.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        connect-src 'self';
+    ">
+
+    <!-- Link para CSS -->
 </head>
 <body>
     <h1>Produtos do Salão de Beleza</h1>
     <form id="productForm"> <!-- Altere o ID aqui -->
-        <input type="text" id="name" placeholder="Nome do Produto" required> <!-- Altere o ID para 'name' -->
-        <textarea id="description" placeholder="Descrição" required></textarea> <!-- Altere o ID para 'description' -->
-        <input type="number" id="price" placeholder="Preço" required> <!-- Altere o ID para 'price' -->
-        <input type="text" id="image" placeholder="URL da Imagem" required> <!-- Altere o ID para 'image' -->
+        <label for="name">Nome do Produto:</label>
+        <input type="text" id="name" placeholder="Nome do Produto" required>
+
+        <label for="description">Descrição:</label>
+        <textarea id="description" placeholder="Descrição" required></textarea>
+
+        <label for="price">Preço:</label>
+        <input type="number" id="price" placeholder="Preço" required>
+
+        <label for="image">URL da Imagem:</label>
+        <input type="text" id="image" placeholder="URL da Imagem" required>
+
         <button type="submit">Adicionar Item</button>
     </form>
-    <div id="productList"></div>
+
+    <h2>Lista de Produtos</h2>
+    <div id="productList">
+        <!-- Mensagem quando não há produtos -->
+        <p>Nenhum produto adicionado ainda.</p>
+    </div>
 
     <script src="script.js"></script> <!-- Link para JavaScript -->
 </body>
+
 </html>
